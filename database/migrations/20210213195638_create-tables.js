@@ -1,27 +1,19 @@
 
-exports.up = function(knex) {
-    return knex.schema
-    .createTable("departments", tbl => {
-      tbl.increments();
-
-      tbl.string("name", 128).notNullable().unique();
-    })
-    .createTable("users", tbl => {
-      tbl.increments();
-
-      tbl.string("username", 128).notNullable().unique().index();
-      tbl.string("password", 256).notNullable();
-
-      tbl
-        .integer("department")
-        .unsigned()
-        .references("departments.id")
-        .onDelete("RESTRICT")
-        .onUpdate("CASCADE")
-        .defaultTo(2);
-    });
+exports.up = knex => {
+  return knex.schema.createTable("users", t => {
+    t.increments()
+     .notNullable()
+      .unique()
+    t.string("username", 255)
+     .notNullable()
+     .unique();
+    t.string("password", 255)
+     .notNullable();
+    t.string("department", 255)
+     .notNullable();
+  });
 };
 
-exports.down = function(knex) {
-    return knex.schema.dropTableIfExists("users").dropTableIfExists("departments");
+exports.down = knex => {
+  return knex.schema.dropTableIfExists("users");
 };
