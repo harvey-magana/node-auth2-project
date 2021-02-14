@@ -14,7 +14,7 @@ server.listen(port, () => console.log(`\n** Running on port ${port} **\n`));
 //6. in your users directory, create your users-router.js file and users-model.js file *
 //7. in your auth directory, create your auth-router.js file *
 //8. in your database directory, create your connection.js file *
-//9. build out your index.js file 
+//9. build out your index.js file *
 //10. build out your server.js file 
 //11. connect your server.js and index.js file
 //12. in your server.js file, create your router variables and mount the routes. 
