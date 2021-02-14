@@ -15,9 +15,9 @@ server.listen(port, () => console.log(`\n** Running on port ${port} **\n`));
 //7. in your auth directory, create your auth-router.js file *
 //8. in your database directory, create your connection.js file *
 //9. build out your index.js file *
-//10. build out your server.js file 
-//11. connect your server.js and index.js file
-//12. in your server.js file, create your router variables and mount the routes. 
+//10. build out your server.js file *
+//11. connect your server.js and index.js file *
+//12. in your server.js file, create your router variables and mount the routes. *
 //13. create your users-model.js file and connect it to users-router.js file 
 //14. connect users-model.js file to connection.js file
 //15. create auth-router.js file and connect it to users-model.js file 
