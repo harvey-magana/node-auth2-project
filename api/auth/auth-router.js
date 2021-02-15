@@ -43,6 +43,7 @@ router.post("/register", (req, res) => {
         .then(([user]) => {
           // compare the password the hash stored in the database
           console.log("auth-router.js line 30", user)
+          req.session.user = user;
           if (user && bcryptjs.compareSync(password, user.password)) {
             console.log("auth-router.js line 32", password)
             const token = generateToken(user);
