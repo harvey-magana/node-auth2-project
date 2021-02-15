@@ -12,10 +12,10 @@ function find() {
         .select('u.id', 'u.username', 'u.department')
 }
 
-function findBy(filter) {
+function findBy(user) {
     return db('users as u')
         .select('u.id', 'u.username', 'u.password', 'u.department')
-        .where(filter)
+        .where(user)
 }
 
 async function add(user) {
